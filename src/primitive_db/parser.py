@@ -96,7 +96,7 @@ def _parse_insert(text):
 
     values_part = text[text.lower().find(KW_VALUES) + len(KW_VALUES) :].strip()
     inner = _extract_parentheses(values_part)
-    values = _split_csv_like(inner)
+    values = [_parse_literal(v) for v in _split_csv_like(inner)]
 
     return {"kind": "insert", "table": table, "values_raw": values}
 
