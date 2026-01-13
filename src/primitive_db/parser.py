@@ -302,7 +302,9 @@ def _parse_literal(token):
         except ValueError as e:
             raise ParseError(f"Некорректное int значение: {t}") from e
 
-    if (t.startswith('"') and t.endswith('"')) or (t.startswith("'") and t.endswith("'")):
+    if (t.startswith('"') and t.endswith('"')) or (
+        t.startswith("'") and t.endswith("'")
+    ):
         return t[1:-1].replace('\\"', '"').replace("\\'", "'")
 
     return t

@@ -60,5 +60,5 @@ poetry run database
 ## Демо-сценарий (asciinema)
 Сценарий команд для записи — см. `DEMO_SCRIPT.md`.
 
-Запись (замените ссылку после собственной записи):
-[![asciicast](https://asciinema.org/a/XXXX.svg)](https://asciinema.org/a/XXXX)
+Запись:
+[![asciicast](https://asciinema.org/a/A9qH6WzXADagLJAp.svg)](https://asciinema.org/a/A9qH6WzXADagLJAp)

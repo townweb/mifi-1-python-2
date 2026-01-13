@@ -20,7 +20,10 @@ def handle_db_errors(func):
             print(f"Ошибка: {e}")
             return None
         except FileNotFoundError:
-            print("Ошибка: Файл данных не найден. Возможно, база данных не инициализирована.")
+            print(
+                "Ошибка: Файл данных не найден. Возможно, база данных не "
+                "инициализирована."
+            )
             return None
         except KeyError as e:
             print(f"Ошибка: Таблица или столбец {e} не найден.")
@@ -42,7 +45,9 @@ def confirm_action(action_name):
 
     def decorator(func):
         def wrapper(*args, **kwargs):
-            answer = prompt.string(MSG_CONFIRM_TEMPLATE.format(action=action_name)).strip()
+            answer = prompt.string(
+                MSG_CONFIRM_TEMPLATE.format(action=action_name)
+            ).strip()
             if answer.lower() != "y":
                 print(MSG_OPERATION_CANCELED)
                 return None

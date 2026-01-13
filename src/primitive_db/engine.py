@@ -31,7 +31,14 @@ def run():
     cacher = create_cacher()
 
     while True:
-        line = prompt.string(PROMPT_TEXT)
+        try:
+            line = prompt.string(PROMPT_TEXT)
+        except EOFError:
+            print()
+            break
+        except KeyboardInterrupt:
+            print()
+            break
         try:
             cmd = parse_command(line)
         except ParseError as exc:
