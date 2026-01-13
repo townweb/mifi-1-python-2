@@ -61,4 +61,4 @@ poetry run database
 Сценарий команд для записи — см. `DEMO_SCRIPT.md`.
 
 Запись:
-[![asciicast](https://asciinema.org/a/A9qH6WzXADagLJAp.svg)](https://asciinema.org/a/A9qH6WzXADagLJAp)
+[![asciicast](https://asciinema.org/a/WWXIRKkXlyeSzlIl.svg)](https://asciinema.org/a/WWXIRKkXlyeSzlIl)
